@@ -182,25 +182,25 @@ color: #fff;
 /* ---------------------------------------------------- */
 
 /* The expand Button */
-.expand {
+.postHeadButton {
+    border: 2px solid #e7e7e7;
+    background-color: white;
     color: #aaaaaa;
     float: right;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 40px;
+    width: 100px;
+    margin: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    //font-weight: bold;
 }
-.expand:hover,
-.expand:focus {
+/*
+.postHeadButton:hover,
+.postHeadButton:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-/* The expand Button */
-.more {
-    color: #aaaaaa;
-    float: right;
-    font-size: 30px;
-    font-weight: bold;
-}
+*/
 
 /* ---------------------- Text adjust on iPhone ---------------------------- */
 html {
