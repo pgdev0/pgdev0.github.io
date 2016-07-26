@@ -62,7 +62,7 @@ q {}
 
 /* Body */
   body {
-    background: #F5F4EF url('../images/bg.png');
+    background: #F5F4EF; /* url('../images/bg.png'); */
     color: #000305;
     font-size: 42px; /* 87.5%; */ /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -154,30 +154,55 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
  
 .hentry .post-info * {font-style: normal;}
  
-  /* Content */
-  .hentry footer {margin-bottom: 0.5em;}
-  .hentry footer address {display: inline;}
-  #posts-list footer address {display: block;}
- 
-  /* Blog Index */
-  #posts-list {list-style: none; margin: 0;}
-  #posts-list .hentry {padding-left: 10px; position: relative;}
-  #posts-list footer {
-    left: 10px; 
-    position: absolute;
-    top: 0.5em;
-    width: 20px;
-  }
-  #posts-list .hentry:hover {
-  background: #C64350;
-  color: #fff;
+/* Content */
+.hentry footer {margin-bottom: 0.5em;}
+.hentry footer address {display: inline;}
+#posts-list footer address {display: block;}
+
+/* Blog Index */
+#posts-list {list-style: none; margin: 0;}
+#posts-list .hentry {padding-left: 10px; position: relative;}
+#posts-list footer {
+  left: 10px; 
+  position: absolute;
+  top: 0.5em;
+  width: 20px;
+}
+/*
+#posts-list .hentry:hover {
+background: #C64350;
+color: #fff;
 }
 #posts-list .hentry:hover a:link, #posts-list .hentry:hover a:visited {
   color: #F6CF74;
   text-shadow: 1px 1px 1px #333;
 }
+*/
 
+/* ---------------------------------------------------- */
 
+/* The expand Button */
+.expand {
+    color: #aaaaaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.expand:hover,
+.expand:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* The expand Button */
+.more {
+    color: #aaaaaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ---------------------- Text adjust on iPhone ---------------------------- */
 html {
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }

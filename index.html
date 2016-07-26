@@ -3,28 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <title>Smashing HTML5!</title>
- 
+
 <link rel="stylesheet" href="css/main.css" type="text/css" />
 <link rel="stylesheet" href="css/modal.css" type="text/css" />
+<script src="src/page_contents.js" type="text/javascript"></script>
 
-<!--
-<meta name="viewport" content="width=568, maximum-scale=1.0">
-<style type="text/css" media="only screen and (max-device-width: 360px) and (orientation: portrait)">
-  body { font-size: 200%; }
-</style>
--->
-<!--
-<script>
-    function supportsImports() {
-      return 'import' in document.createElement('link');
-    }
-    if (supportsImports()) {
-      console.log("Good to go!")
-    } else {
-      console.log("Use other libraries/require systems to load files.")
-    }
-</script>
--->
 </head>
 
 <body id="index" class="home">
@@ -47,40 +30,31 @@
  
     <li><article class="hentry">  
       <header>
-        <h2 class="entry-title"><a href="#" rel="bookmark" title="Permalink to this POST TITLE">How to practice</a></h2>
+        <h2 class="entry-title"><a href="#" rel="bookmark" title="Permalink to this POST TITLE" id="top-head">How to practice</a></h2>
       </header>
  
       <div class="entry-content">
-        <p>How do you begin? What to keep in mind? 
-            <br/>- Come into pose. 
-            <br/>- Resolve to remain still. 
-            <br/>- Hold for time</p>
+        <p id="top-body"></p>
       </div><!-- /.entry-content -->
     </article></li>
     
     <li><article class="hentry">
      <header>
-        <h2 class="entry-title"><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Intention & Attention</a></h2>
+        <h2 class="entry-title"><a href="#" rel="bookmark" title="Permalink to this POST TITLE" id="middle-head">Intention & Attention</a></h2>
       </header>
  
       <div class="entry-content">
-        <p>What is my <a href="#" id="modal1">Intention</a>. And am I paying Attention?
-            <br/>- Opening. 
-            <br/>- Begin asanas. 
-            <br/>- Closing</p>
+        <p id="middle-body"><a href="#" id="modal1">Intention</a></p>
       </div><!-- /.entry-content -->
      </article></li>
  
     <li><article class="hentry">
      <header>
-        <h2 class="entry-title"><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Moving energy</a></h2>
+        <h2 class="entry-title"><a href="#" rel="bookmark" title="Permalink to this POST TITLE" id="bottom-head">Moving energy</a></h2>
       </header>
  
       <div class="entry-content">
-        <p>How to circulate energy? What are different techniques?
-            <br/>- Simple awareness. 
-            <br/>- Humsa mantra. 
-            <br/>- Orbiting energy</p>
+        <p id="bottom-body"></p>
       </div><!-- /.entry-content -->
      </article></li>
     
@@ -100,18 +74,7 @@
     </div>
     </article>
     <article class="hentry"> 
-    <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-    </div>
+    <div class="modal-body" id="modal-body-1"></div>
     </article>
     <article class="hentry"> 
     <div class="modal-footer">
@@ -213,6 +176,8 @@
  <script src="src/modal.js" type="text/javascript"></script>
 
 </header><!-- /#banner --> 
+
+<script src="src/assign_contents.js" type="text/javascript"></script>
 
 </body>
 </html>

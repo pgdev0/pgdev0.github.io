@@ -3,13 +3,24 @@
 	var modal = document.getElementById('myModal1');
 
 	// Get the button that opens the modal
-	var link = document.getElementById("modal1");
+	var link1 = document.getElementById("top-head");
+	var link2 = document.getElementById("middle-head");
+	var link3 = document.getElementById("bottom-head");
 
 	// Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("close")[0];
 
 	// When the user clicks the button, open the modal
-	link.onclick = function() {
+	link1.onclick = function() {
+		document.getElementById("modal-body-1").innerHTML = flowPage.top.modal.body.details;
+		modal.style.display = "block"; 
+	}
+	link2.onclick = function() {
+		document.getElementById("modal-body-1").innerHTML = flowPage.middle.modal.body.details;
+		modal.style.display = "block"; 
+	}
+	link3.onclick = function() {
+		document.getElementById("modal-body-1").innerHTML = flowPage.bottom.modal.body.details;
 	    modal.style.display = "block";
 	}
 
