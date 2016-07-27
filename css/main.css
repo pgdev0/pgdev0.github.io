@@ -217,6 +217,7 @@ color: #fff;
     float: left;
     text-align: left;
     margin-right: 10px;
+    padding-right: 100px;
 }
 .postBodyButtonRight {
     float: right;
