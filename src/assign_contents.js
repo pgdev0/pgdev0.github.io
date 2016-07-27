@@ -12,6 +12,7 @@ function nextPageFromTopPost() {
   if(stateNextPageFromTopPost == 0) {
     document.getElementById("top-body").innerHTML = flowPage.top.body + "      ...clicked";
     stateNextPageFromTopPost = 1;
+    document.getElementById("aaa").style.visibility = "hidden";
   } else {
     document.getElementById("top-body").innerHTML = flowPage.top.body;
     stateNextPageFromTopPost = 0;   
@@ -22,6 +23,7 @@ function nextPageFromMiddlePost() {
   if(stateNextPageFromMiddlePost == 0) {
     document.getElementById("middle-body").innerHTML = flowPage.middle.body + "      ...clicked";
     stateNextPageFromMiddlePost = 1;
+    document.getElementById("bbb").style.visibility = "hidden";
   } else if(stateNextPageFromMiddlePost == 1) {
     document.getElementById("middle-body").innerHTML = flowPage.middle.body + "      ...clicked again";
     stateNextPageFromMiddlePost = 2;
@@ -35,6 +37,7 @@ function nextPageFromBottomPost() {
   if(stateNextPageFromBottomPost == 0) {
     document.getElementById("bottom-body").innerHTML = flowPage.bottom.body + "      ...clicked";
     stateNextPageFromBottomPost = 1;
+    document.getElementById("ccc").style.visibility = "hidden";
   } else {
     document.getElementById("bottom-body").innerHTML = flowPage.bottom.body;
     stateNextPageFromBottomPost = 0;   
