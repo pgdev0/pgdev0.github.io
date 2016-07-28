@@ -120,9 +120,9 @@ aside, nav, article, figure {
     text-align: center;
     width: 95%;
     
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
   }
   
   #banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
