@@ -119,3 +119,38 @@
 	    }
 	}
 
+
+	// ----------------------------- Modal 5 -----------------------------
+	// Get the modal
+	var modal5 = document.getElementById('myModal5');
+
+	/*
+	// Get the button that opens the modal
+	var link5 = document.getElementById("modal5");
+	// When the user clicks the button, open the modal
+	link5.onclick = function() {
+	    modal5.style.display = "block";
+	}
+
+	*/
+
+	// Get the <span> element that closes the modal
+	var span5 = document.getElementsByClassName("close")[4];
+
+	// When the user clicks on <span> (x), close the modal
+	span5.onclick = function() {
+	    modal5.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal5) {
+	        modal5.style.display = "none";
+	    }
+	}
+
+	function alertModal(msg) {	
+	  document.getElementById("alertModalMsg").innerHTML = msg;
+	  var modal5 = document.getElementById('myModal5');
+	  modal5.style.display = "block";
+	}

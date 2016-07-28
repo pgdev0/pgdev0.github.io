@@ -19,10 +19,9 @@
 <header id="banner" class="body">
   <nav><ul>
     <li class="active"><a href="#" id="modal2">flow</a></li>
-    <li><a href="#">theory</a></li>
- 
-    <li><a href="#">philos</a></li>
-    <li><a href="#">contents</a></li>
+    <li><a href="#" onclick="alertModal('No theory yet!')">theory</a></li>
+    <li><a href="#" onclick="alertModal('No philosophy yet!')"">philos</a></li>
+    <li><a href="#" onclick="alertModal('Contents coming soon!')"">contents</a></li>
   </ul></nav>
  
 </header><!-- /#banner --> 
@@ -256,6 +255,37 @@
       </dl>
       <br>
       <p>Some other text...</p>
+      <br><br>
+    </div>
+    </article>
+    <!--
+    <article class="hentry"> 
+    <div class="modal-footer">
+      <h3>modal footer</h3>
+    </div>
+    </article>
+    -->
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal5" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" id="modal-content-alert">
+    <!--
+    <article class="hentry"> 
+    <div class="modal-header">
+      <span class="close">x</span>
+      <a>modal header..</a>
+    </div>
+    </article>
+    -->
+    <article class="hentry"> 
+    <div class="modal-body">
+      <span class="close">x</span>
+      <br><br>
+      <p id="alertModalMsg">Can't go further</p>
       <br><br>
     </div>
     </article>
