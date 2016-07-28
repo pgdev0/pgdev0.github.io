@@ -12,15 +12,15 @@
 
 	// When the user clicks the button, open the modal
 	link1.onclick = function() {
-		document.getElementById("modal-body-1").innerHTML = flowPage.top.modal.body.details;
+		document.getElementById("modal-body-1").innerHTML = flowPageCurrent.top[stateNextSlideFromTopPost].modal.body.details;
 		modal.style.display = "block"; 
 	}
 	link2.onclick = function() {
-		document.getElementById("modal-body-1").innerHTML = flowPage.middle.modal.body.details;
+		document.getElementById("modal-body-1").innerHTML = flowPageCurrent.middle.modal.body.details;
 		modal.style.display = "block"; 
 	}
 	link3.onclick = function() {
-		document.getElementById("modal-body-1").innerHTML = flowPage.bottom.modal.body.details;
+		document.getElementById("modal-body-1").innerHTML = flowPageCurrent.bottom.modal.body.details;
 	    modal.style.display = "block";
 	}
 

@@ -1,14 +1,14 @@
 // var text = "";
 // var obj = JSON.parse(text);
-document.getElementById("top-head").innerHTML = flowPage.top.head;
-document.getElementById("top-body").innerHTML = flowPage.top.body;
+document.getElementById("top-head").innerHTML = flowPage.top[0].head;
+document.getElementById("top-body").innerHTML = flowPage.top[0].body;
 document.getElementById("middle-head").innerHTML = flowPage.middle.head;
 document.getElementById("middle-body").innerHTML = flowPage.middle.body;
 document.getElementById("bottom-head").innerHTML = flowPage.bottom.head;
 document.getElementById("bottom-body").innerHTML = flowPage.bottom.body;
 
 var stateNextPageFromTopPost = 0;
-function nextPageFromTopPost() {
+function nextPageFromTopPost1() {
   if(stateNextPageFromTopPost == 0) {
     document.getElementById("top-body").innerHTML = flowPage.top.body + "      ...clicked";
     stateNextPageFromTopPost = 1;
@@ -18,8 +18,39 @@ function nextPageFromTopPost() {
     stateNextPageFromTopPost = 0;   
   }
 }
-var stateNextPageFromMiddlePost = 0;
-function nextPageFromMiddlePost() {
+function nextPageFromTopPost() {
+  flowPageCurrent = flowPage.top[0].next;
+  document.getElementById("top-head").innerHTML = flowPageCurrent.top[0].head
+  document.getElementById("top-body").innerHTML = flowPageCurrent.top[0].body
+  stateNextSlideFromTopPost = 0;
+}
+
+function nextSlideFromTopPost() {
+  stateNextSlideFromTopPost++;
+  if(flowPageCurrent.top[stateNextSlideFromTopPost] == undefined) {  stateNextSlideFromTopPost = 0 }
+  document.getElementById("top-head").innerHTML = flowPageCurrent.top[stateNextSlideFromTopPost].head
+  document.getElementById("top-body").innerHTML = flowPageCurrent.top[stateNextSlideFromTopPost].body
+}
+function prevSlideFromTopPost() {
+  stateNextSlideFromTopPost--;
+  if(flowPageCurrent.top[stateNextSlideFromTopPost] == undefined) 
+    {  stateNextSlideFromTopPost = flowPageCurrent.top.length - 1 }
+  document.getElementById("top-body").innerHTML = flowPageCurrent.top[stateNextSlideFromTopPost].body
+}
+
+function nextSlideFromTopPost1() {
+  if(stateNextPageFromTopPost == 0) {
+    document.getElementById("top-body").innerHTML = flowPage.top.next.top[0].body + "      ...clicked";
+    stateNextPageFromTopPost = 1;
+  } else if(stateNextPageFromTopPost == 1) {
+    document.getElementById("top-body").innerHTML = flowPage.top.next.top[1].body + "      ...clicked again";
+    stateNextPageFromTopPost = 2;
+  } else {
+    document.getElementById("top-body").innerHTML = flowPage.top.next.top[2].body;
+    stateNextPageFromTopPost = 0;   
+  }
+}
+function nextSlideFromMiddlePost() {
   if(stateNextPageFromMiddlePost == 0) {
     document.getElementById("middle-body").innerHTML = flowPage.middle.body + "      ...clicked";
     stateNextPageFromMiddlePost = 1;
@@ -32,8 +63,7 @@ function nextPageFromMiddlePost() {
     stateNextPageFromMiddlePost = 0;   
   }
 }
-var stateNextPageFromBottomPost = 0;
-function nextPageFromBottomPost() {
+function nextSlideFromBottomPost() {
   if(stateNextPageFromBottomPost == 0) {
     document.getElementById("bottom-body").innerHTML = flowPage.bottom.body + "      ...clicked";
     stateNextPageFromBottomPost = 1;

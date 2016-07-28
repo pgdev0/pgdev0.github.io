@@ -188,9 +188,9 @@ color: #fff;
     color: #aaaaaa;
     float: right;
     font-size: 40px;
-    width: 180px;
+    width: 110px;
     height: 60px;
-    margin: 1px 10px 1px 1px;
+    margin: 1px 1px 1px 1px;
     padding: 1px 1px 1px 1px;
     //font-weight: bold;
 }
@@ -212,8 +212,8 @@ color: #fff;
     //border: 1px solid #F8F8F8;
     border: 1px solid white;
     background-color: white;
-    //color: #aaaaaa;
-    color: #dddddd;
+    color: #aaaaaa;
+    //color: #dddddd;
     font-stretch: ultra-condensed;
     font-family: "Courier New";
 }
@@ -223,15 +223,17 @@ color: #fff;
     margin-right: 10px;
     padding-right: 30px;
     padding-left: 0;
-    transform: scaleY(1.68);
+    transform: scaleY(1.66);
 }
 .postBodyButtonRight {
     float: right;
+    position: fixed;
+    right: 125px;
     text-align: center;
     width: 80px;
     margin-right: 10px;
-    //padding-right: 20px;
-    transform: scaleY(1.68);
+    padding-right: 1px;
+    transform: scaleY(1.66);
 }
 .postBodyButtonLeft:hover,
 .postBodyButtonLeft:focus,
