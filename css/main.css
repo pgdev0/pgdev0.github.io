@@ -133,8 +133,8 @@ aside, nav, article, figure {
   background: #fff;
   margin-bottom: 0.5em;
   overflow: hidden;
-  padding: 2px 2px;
-  width: 880px;
+  padding: 0 40px 0 40px;
+  width: 820px;
  
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -144,12 +144,12 @@ aside, nav, article, figure {
 /* Blog */
 .hentry {
   border-bottom: 1px solid #eee;
-  padding: 0 0;
+  padding: 0 50px 0 50px;
 }
 li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
-#content > .hentry {padding: 0.5em 0;}
+#content > .hentry {padding: 0.5em 0em;}
  
-.entry-title {font-size: 1.4em; margin-bottom: 0; padding-left: 68px;}
+.entry-title {font-size: 1.4em; margin-bottom: 0; padding-left: 0;}
 .entry-title a:link, .entry-title a:visited {text-decoration: none;}
  
 .hentry .post-info * {font-style: normal;}
@@ -166,7 +166,7 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
   left: 10px; 
   position: absolute;
   top: 0.5em;
-  width: 20px;
+  width: 100px;
 }
 /*
 #posts-list .hentry:hover {
@@ -183,16 +183,18 @@ color: #fff;
 
 /* The expand Button */
 .postHeadButton {
-    border: 2px solid #F6F6F6;
-    background-color: white;
-    color: #aaaaaa;
     float: right;
-    font-size: 40px;
+    position: fixed;
+    right: 16px;
     width: 110px;
     height: 60px;
     margin: 1px 1px 1px 1px;
     padding: 1px 1px 1px 1px;
+    font-size: 40px;
     //font-weight: bold;
+    color: #aaaaaa;
+    background-color: white;
+    border: 2px solid #F6F6F6;
 }
 
 .postHeadButton:hover,
@@ -208,7 +210,7 @@ color: #fff;
     width: 60px;
     height: 180px;
     font-size: 32px;
-    margin-top: 20px;
+    margin-top: 25px;
     //border: 1px solid #F8F8F8;
     border: 1px solid white;
     background-color: white;
