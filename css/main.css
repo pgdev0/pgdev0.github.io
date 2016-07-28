@@ -62,7 +62,7 @@ q {}
 
 /* Body */
   body {
-    background: #F5F4EF; /* url('../images/bg.png'); */
+    background: black; /* url('../images/bg.png'); */
     color: #000305;
     font-size: 42px; /* 87.5%; */ /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -88,7 +88,7 @@ aside, nav, article, figure {
 *****************/
 #banner {
   margin: 0 auto;
-  padding: 10px 0 0 0;
+  padding: 20px 0 0 0;
 }
  
   /* Banner */
@@ -115,7 +115,7 @@ aside, nav, article, figure {
     font-size: 1.143em;
     height: 80px;
     line-height: 30px;
-    margin: 0 auto 0.4em auto;
+    margin: 0 auto 0.2em auto;
     padding: 0;
     text-align: center;
     width: 100%;
@@ -157,7 +157,7 @@ aside, nav, article, figure {
 *****************/
 #content {
   background: #fff;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   overflow: hidden;
   padding: 0 40px 0 40px;
   width: 820px;
