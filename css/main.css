@@ -206,9 +206,9 @@ color: #fff;
 .postBodyButtonLeft, .postBodyButtonRight {
     display: inline;
     width: 60px;
-    height: 160px;
+    height: 240px;
     font-size: 32px;
-    margin-top: 70px;
+    margin-top: 20px;
     //border: 1px solid #F8F8F8;
     border: 1px solid white;
     background-color: white;
@@ -219,21 +219,23 @@ color: #fff;
 }
 .postBodyButtonLeft {
     float: left;
+    position: fixed;
+    left: 40px;
     text-align: left;
     margin-right: 10px;
     padding-right: 30px;
     padding-left: 0;
-    transform: scaleY(1.66);
+    transform: scaleY(1.2);
 }
 .postBodyButtonRight {
     float: right;
     position: fixed;
-    right: 125px;
+    right: 20px;
     text-align: center;
     width: 80px;
     margin-right: 10px;
     padding-right: 1px;
-    transform: scaleY(1.66);
+    transform: scaleY(1.2);
 }
 .postBodyButtonLeft:hover,
 .postBodyButtonLeft:focus,
