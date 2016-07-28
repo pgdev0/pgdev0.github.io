@@ -83,13 +83,39 @@ aside, nav, article, figure {
 /***** Layout *****/
 .body {clear: both; margin: 0 auto; width: 900px;}
 
+/*
+  Header
+*****************/
+#banner {
+  margin: 0 auto;
+  padding: 0 0 0 0;
+}
+ 
+  /* Banner */
+  #banner h1 {font-size: 3.571em; line-height: .6;}
+  #banner h1 a:link, #banner h1 a:visited {
+    color: #000305;
+    display: block;
+    font-weight: bold;
+    margin: 0 0 .6em .2em;
+    text-decoration: none;
+    width: 427px;
+  }
+  #banner h1 a:hover, #banner h1 a:active {
+    background: none;
+    color: #C74350;
+    text-shadow: none;
+  }
+ 
+  #banner h1 strong {font-size: 0.36em; font-weight: normal;}
+
 /* Main Nav */
   #banner nav {
     background: #000305;
     font-size: 1.143em;
     height: 80px;
     line-height: 30px;
-    margin: 0 auto 0.5em auto;
+    margin: 0 auto 0.4em auto;
     padding: 0;
     text-align: center;
     width: 100%;
@@ -99,7 +125,7 @@ aside, nav, article, figure {
     -webkit-border-radius: 5px;
   }
   
-  #banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
+  #banner nav ul {list-style: none; margin: 0 0; width: 800px;}
   #banner nav li {float: left; display: inline; margin: 16px;}
   
   #banner nav a:link, #banner nav a:visited {
