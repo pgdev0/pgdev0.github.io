@@ -1,0 +1,281 @@
+
+/***** Global *****/
+/* Headings */
+h2 {font-size: 1.571em} /* 22px */
+h3 {font-size: 1.429em} /* 20px */
+h4 {font-size: 1.286em} /* 18px */
+h5 {font-size: 1.143em} /* 16px */
+h6 {font-size: 1em} /* 14px */
+ 
+h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0em;
+  margin-top: 0.5em;
+}
+ 
+/* Anchors */
+a {outline: 0;}
+a img {border: 0px; text-decoration: none;}
+a:link, a:visited {
+  color: #C74350;
+  padding: 0 1px;
+  text-decoration: underline;
+}
+a:hover, a:active {
+  background-color: #C74350;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #333;
+}
+ 
+/* Paragraphs */
+p {margin-bottom: 1.143em;}
+* p:last-child {margin-bottom: 0;}
+ 
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+ 
+::-moz-selection {background: #F6CF74; color: #fff;}
+::selection {background: #F6CF74; color: #fff;}
+
+/* Lists */
+ul {
+  list-style: outside disc;
+  margin: 1em 0 1.5em 1.5em;
+}
+ 
+ol {
+  list-style: outside decimal;
+  margin: 1em 0 1.5em 1.5em;
+}
+
+dl {margin: 0 0 1.5em 0;}
+dt {font-weight: bold;}
+dd {margin-left: 1.5em;}
+ 
+/* Quotes */
+blockquote {font-style: italic;}
+cite {}
+ 
+q {}
+
+/* Body */
+  body {
+    background: black; /* url('../images/bg.png'); */
+    color: #000305;
+    font-size: 42px; /* 87.5%; */ /* Base font size: 14px */
+    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.429;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  }
+
+
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+  display: block;
+}
+
+/***** Layout *****/
+.body {clear: both; margin: 0 auto; width: 900px;}
+
+/*
+  Header
+*****************/
+#banner {
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+}
+ 
+  /* Banner */
+  #banner h1 {font-size: 3.571em; line-height: .6;}
+  #banner h1 a:link, #banner h1 a:visited {
+    color: #000305;
+    display: block;
+    font-weight: bold;
+    margin: 0 0 .6em .2em;
+    text-decoration: none;
+    width: 427px;
+  }
+  #banner h1 a:hover, #banner h1 a:active {
+    background: none;
+    color: #C74350;
+    text-shadow: none;
+  }
+ 
+  #banner h1 strong {font-size: 0.36em; font-weight: normal;}
+
+/* Main Nav */
+  #banner nav {
+    background: #000305;
+    font-size: 1.143em;
+    height: 80px;
+    line-height: 30px;
+    margin: 0 auto 0.2em auto;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  }
+  
+  #banner nav ul {list-style: none; margin: 0 0; width: 800px;}
+  #banner nav li {float: left; display: inline; margin: 16px;}
+  
+  #banner nav a:link, #banner nav a:visited {
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    padding: 5px 0.3em;
+    text-decoration: none;
+  }
+  #banner nav a:hover, #banner nav a:active,
+  #banner nav .active a:link, #banner nav .active a:visited {
+    background: #C74451;
+    color: #fff;
+    text-shadow: none !important;
+  }
+  
+  #banner nav li:first-child a {
+    border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    
+    border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+  }
+
+/*
+  Body
+*****************/
+#content {
+  background: #fff;
+  margin-bottom: 0.2em;
+  overflow: hidden;
+  padding: 0 40px 0 40px;
+  width: 820px;
+ 
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+/* Blog */
+.hentry {
+  border-bottom: 1px solid #eee;
+  padding: 0 50px 0 50px;
+}
+li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
+#content > .hentry {padding: 0.5em 0em;}
+ 
+.entry-title {font-size: 1.4em; margin-bottom: 0; padding-left: 0;}
+.entry-title a:link, .entry-title a:visited {text-decoration: none;}
+ 
+.hentry .post-info * {font-style: normal;}
+ 
+/* Content */
+.hentry footer {margin-bottom: 0.5em;}
+.hentry footer address {display: inline;}
+#posts-list footer address {display: block;}
+
+/* Blog Index */
+#posts-list {list-style: none; margin: 0;}
+#posts-list .hentry {padding-left: 1px; position: relative;}
+#posts-list footer {
+  left: 10px; 
+  position: absolute;
+  top: 0.5em;
+  width: 100px;
+}
+/*
+#posts-list .hentry:hover {
+background: #C64350;
+color: #fff;
+}
+#posts-list .hentry:hover a:link, #posts-list .hentry:hover a:visited {
+  color: #F6CF74;
+  text-shadow: 1px 1px 1px #333;
+}
+*/
+
+/* ---------------------------------------------------- */
+
+/* The expand Button */
+.postHeadButton {
+    float: right;
+    position: fixed;
+    right: 16px;
+    width: 110px;
+    height: 60px;
+    margin: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    font-size: 40px;
+    //font-weight: bold;
+    color: #aaaaaa;
+    background-color: white;
+    border: 2px solid #F6F6F6;
+}
+
+.postHeadButton:hover,
+.postHeadButton:focus {
+    color: #000;
+    background-color: pink;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.postBodyButtonLeft, .postBodyButtonRight {
+    display: inline;
+    width: 60px;
+    height: 180px;
+    font-size: 32px;
+    margin-top: 25px;
+    //border: 1px solid #F8F8F8;
+    border: 1px solid white;
+    background-color: white;
+    color: #aaaaaa;
+    //color: #dddddd;
+    font-stretch: ultra-condensed;
+    font-family: "Courier New";
+}
+.postBodyButtonLeft {
+    float: left;
+    position: fixed;
+    left: 16px;
+    text-align: left;
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-left: 0;
+    transform: scaleY(1.2);
+}
+.postBodyButtonRight {
+    float: right;
+    position: fixed;
+    right: 16px;
+    text-align: center;
+    //width: 80px;
+    margin-right: 10px;
+    padding-right: 1px;
+    transform: scaleY(1.2);
+}
+.postBodyButtonLeft:hover,
+.postBodyButtonLeft:focus,
+.postBodyButtonRight:hover,
+.postBodyButtonRight:focus {
+    color: #000;
+    background-color: #F8F8F8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ---------------------- Text adjust on iPhone ---------------------------- */
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
