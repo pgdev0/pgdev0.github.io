@@ -15,8 +15,14 @@ function renderPage() {
 }
 
 function backButton() {
+  // If stack is empty, them already at home
+  if(stack.length==0) { alert("Can't go further back. Already at home."); return; }
+  stack.pop(); // Peel current page off
+  // If only one deep, bring back to home page
+  flowPageCurrent = flowPage;
+  if(stack.length==0) { renderPage(); return; }
+  // If deep in the hier, start from the begining until you reach one less
   var i, post_loc;
-  stack.pop(); // Remove the current page location
   for(i=0; i<stack.length; i++) {
     post_loc = stack[i];
     if(flowPageCurrent.posts[post_loc].next == undefined) return;
@@ -54,7 +60,7 @@ function nextPageFromMiddlePost() {
   if(flowPageCurrent.posts[1].next == undefined) { alert("No further content"); return; }
   flowPageCurrent = flowPageCurrent.posts[1].next;
   renderPage();
-  stack.push(0);
+  stack.push(1);
 }
 
 function nextSlideFromMiddlePost() {
@@ -78,7 +84,7 @@ function nextPageFromBottomPost() {
   if(flowPageCurrent.posts[2].next == undefined) { alert("No further content"); return; }
   flowPageCurrent = flowPageCurrent.posts[2].next;
   renderPage();
-  stack.push(0);
+  stack.push(2);
 }
 
 function nextSlideFromBottomPost() {
