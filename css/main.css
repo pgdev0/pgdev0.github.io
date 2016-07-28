@@ -206,7 +206,7 @@ color: #fff;
 .postBodyButtonLeft, .postBodyButtonRight {
     display: inline;
     width: 60px;
-    height: 240px;
+    height: 180px;
     font-size: 32px;
     margin-top: 20px;
     //border: 1px solid #F8F8F8;
@@ -220,19 +220,19 @@ color: #fff;
 .postBodyButtonLeft {
     float: left;
     position: fixed;
-    left: 40px;
+    left: 16px;
     text-align: left;
     margin-right: 10px;
-    padding-right: 30px;
+    padding-right: 10px;
     padding-left: 0;
     transform: scaleY(1.2);
 }
 .postBodyButtonRight {
     float: right;
     position: fixed;
-    right: 20px;
+    right: 16px;
     text-align: center;
-    width: 80px;
+    //width: 80px;
     margin-right: 10px;
     padding-right: 1px;
     transform: scaleY(1.2);
