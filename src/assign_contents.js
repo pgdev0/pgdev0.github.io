@@ -1,75 +1,98 @@
 // var text = "";
 // var obj = JSON.parse(text);
-document.getElementById("top-head").innerHTML = flowPage.top[0].head;
-document.getElementById("top-body").innerHTML = flowPage.top[0].body;
-document.getElementById("middle-head").innerHTML = flowPage.middle.head;
-document.getElementById("middle-body").innerHTML = flowPage.middle.body;
-document.getElementById("bottom-head").innerHTML = flowPage.bottom.head;
-document.getElementById("bottom-body").innerHTML = flowPage.bottom.body;
+renderPage();
 
-var stateNextPageFromTopPost = 0;
-function nextPageFromTopPost1() {
-  if(stateNextPageFromTopPost == 0) {
-    document.getElementById("top-body").innerHTML = flowPage.top.body + "      ...clicked";
-    stateNextPageFromTopPost = 1;
-    document.getElementById("aaa").style.visibility = "hidden";
-  } else {
-    document.getElementById("top-body").innerHTML = flowPage.top.body;
-    stateNextPageFromTopPost = 0;   
-  }
-}
-function nextPageFromTopPost() {
-  flowPageCurrent = flowPage.top[0].next;
-  document.getElementById("top-head").innerHTML = flowPageCurrent.top[0].head
-  document.getElementById("top-body").innerHTML = flowPageCurrent.top[0].body
+function renderPage() {
+  document.getElementById("top-head").innerHTML = flowPageCurrent.posts[0].slides[0].head;
+  document.getElementById("top-body").innerHTML = flowPageCurrent.posts[0].slides[0].body;
+  document.getElementById("middle-head").innerHTML = flowPageCurrent.posts[1].slides[0].head;
+  document.getElementById("middle-body").innerHTML = flowPageCurrent.posts[1].slides[0].body;
+  document.getElementById("bottom-head").innerHTML = flowPageCurrent.posts[2].slides[0].head;
+  document.getElementById("bottom-body").innerHTML = flowPageCurrent.posts[2].slides[0].body;
   stateNextSlideFromTopPost = 0;
+  stateNextSlideFromMiddlePost = 0;
+  stateNextSlideFromBottomPost = 0;
+}
+
+function backButton() {
+  var i, post_loc;
+  stack.pop(); // Remove the current page location
+  for(i=0; i<stack.length; i++) {
+    post_loc = stack[i];
+    if(flowPageCurrent.posts[post_loc].next == undefined) return;
+    flowPageCurrent = flowPageCurrent.posts[post_loc].next 
+  }
+  renderPage();
+}
+
+/* ------------------------- Top-post buttons ------------------------ */
+function nextPageFromTopPost() {
+  if(flowPageCurrent.posts[0].next == undefined) { alert("No further content"); return; }
+  flowPageCurrent = flowPageCurrent.posts[0].next;
+  renderPage();
+  stack.push(0);
 }
 
 function nextSlideFromTopPost() {
+  if(flowPageCurrent.posts[0].slides.length == 1) { alert("No other slide"); return; }
   stateNextSlideFromTopPost++;
-  if(flowPageCurrent.top[stateNextSlideFromTopPost] == undefined) {  stateNextSlideFromTopPost = 0 }
-  document.getElementById("top-head").innerHTML = flowPageCurrent.top[stateNextSlideFromTopPost].head
-  document.getElementById("top-body").innerHTML = flowPageCurrent.top[stateNextSlideFromTopPost].body
+  if(flowPageCurrent.posts[0].slides[stateNextSlideFromTopPost] == undefined) {  stateNextSlideFromTopPost = 0 }
+  document.getElementById("top-head").innerHTML = flowPageCurrent.posts[0].slides[stateNextSlideFromTopPost].head
+  document.getElementById("top-body").innerHTML = flowPageCurrent.posts[0].slides[stateNextSlideFromTopPost].body
 }
 function prevSlideFromTopPost() {
+  if(flowPageCurrent.posts[0].slides.length == 1) { alert("No other slide"); return; }
   stateNextSlideFromTopPost--;
-  if(flowPageCurrent.top[stateNextSlideFromTopPost] == undefined) 
-    {  stateNextSlideFromTopPost = flowPageCurrent.top.length - 1 }
-  document.getElementById("top-body").innerHTML = flowPageCurrent.top[stateNextSlideFromTopPost].body
+  if(flowPageCurrent.posts[0].slides[stateNextSlideFromTopPost] == undefined) 
+    {  stateNextSlideFromTopPost = flowPageCurrent.posts[0].slides.length - 1 }
+  document.getElementById("top-head").innerHTML = flowPageCurrent.posts[0].slides[stateNextSlideFromTopPost].head
+  document.getElementById("top-body").innerHTML = flowPageCurrent.posts[0].slides[stateNextSlideFromTopPost].body
 }
 
-function nextSlideFromTopPost1() {
-  if(stateNextPageFromTopPost == 0) {
-    document.getElementById("top-body").innerHTML = flowPage.top.next.top[0].body + "      ...clicked";
-    stateNextPageFromTopPost = 1;
-  } else if(stateNextPageFromTopPost == 1) {
-    document.getElementById("top-body").innerHTML = flowPage.top.next.top[1].body + "      ...clicked again";
-    stateNextPageFromTopPost = 2;
-  } else {
-    document.getElementById("top-body").innerHTML = flowPage.top.next.top[2].body;
-    stateNextPageFromTopPost = 0;   
-  }
+/* ------------------------- Middle-post buttons ------------------------ */
+function nextPageFromMiddlePost() {
+  if(flowPageCurrent.posts[1].next == undefined) { alert("No further content"); return; }
+  flowPageCurrent = flowPageCurrent.posts[1].next;
+  renderPage();
+  stack.push(0);
 }
+
 function nextSlideFromMiddlePost() {
-  if(stateNextPageFromMiddlePost == 0) {
-    document.getElementById("middle-body").innerHTML = flowPage.middle.body + "      ...clicked";
-    stateNextPageFromMiddlePost = 1;
-    document.getElementById("bbb").style.visibility = "hidden";
-  } else if(stateNextPageFromMiddlePost == 1) {
-    document.getElementById("middle-body").innerHTML = flowPage.middle.body + "      ...clicked again";
-    stateNextPageFromMiddlePost = 2;
-  } else {
-    document.getElementById("middle-body").innerHTML = flowPage.middle.body;
-    stateNextPageFromMiddlePost = 0;   
-  }
+  if(flowPageCurrent.posts[1].slides.length == 1) { alert("No other slide"); return; }
+  stateNextSlideFromMiddlePost++;
+  if(flowPageCurrent.posts[1].slides[stateNextSlideFromMiddlePost] == undefined) {  stateNextSlideFromMiddlePost = 0 }
+  document.getElementById("middle-head").innerHTML = flowPageCurrent.posts[1].slides[stateNextSlideFromMiddlePost].head
+  document.getElementById("middle-body").innerHTML = flowPageCurrent.posts[1].slides[stateNextSlideFromMiddlePost].body
 }
+function prevSlideFromMiddlePost() {
+  if(flowPageCurrent.posts[1].slides.length == 1) { alert("No other slide"); return; }
+  stateNextSlideFromMiddlePost--;
+  if(flowPageCurrent.posts[1].slides[stateNextSlideFromMiddlePost] == undefined) 
+    {  stateNextSlideFromMiddlePost = flowPageCurrent.posts[1].slides.length - 1 }
+  document.getElementById("middle-head").innerHTML = flowPageCurrent.posts[1].slides[stateNextSlideFromMiddlePost].head
+  document.getElementById("middle-body").innerHTML = flowPageCurrent.posts[1].slides[stateNextSlideFromMiddlePost].body
+}
+
+/* ------------------------- Bottom-post buttons ------------------------ */
+function nextPageFromBottomPost() {
+  if(flowPageCurrent.posts[2].next == undefined) { alert("No further content"); return; }
+  flowPageCurrent = flowPageCurrent.posts[2].next;
+  renderPage();
+  stack.push(0);
+}
+
 function nextSlideFromBottomPost() {
-  if(stateNextPageFromBottomPost == 0) {
-    document.getElementById("bottom-body").innerHTML = flowPage.bottom.body + "      ...clicked";
-    stateNextPageFromBottomPost = 1;
-    document.getElementById("ccc").style.visibility = "hidden";
-  } else {
-    document.getElementById("bottom-body").innerHTML = flowPage.bottom.body;
-    stateNextPageFromBottomPost = 0;   
-  }
+  if(flowPageCurrent.posts[2].slides.length == 1) { alert("No other slide"); return; }
+  stateNextSlideFromBottomPost++;
+  if(flowPageCurrent.posts[2].slides[stateNextSlideFromBottomPost] == undefined) {  stateNextSlideFromBottomPost = 0 }
+  document.getElementById("bottom-head").innerHTML = flowPageCurrent.posts[2].slides[stateNextSlideFromBottomPost].head
+  document.getElementById("bottom-body").innerHTML = flowPageCurrent.posts[2].slides[stateNextSlideFromBottomPost].body
+}
+function prevSlideFromBottomPost() {
+  if(flowPageCurrent.posts[2].slides.length == 1) { alert("No other slide"); return; }
+  stateNextSlideFromBottomPost--;
+  if(flowPageCurrent.posts[2].slides[stateNextSlideFromBottomPost] == undefined) 
+    {  stateNextSlideFromBottomPost = flowPageCurrent.posts[2].slides.length - 1 }
+  document.getElementById("bottom-head").innerHTML = flowPageCurrent.posts[2].slides[stateNextSlideFromBottomPost].head
+  document.getElementById("bottom-body").innerHTML = flowPageCurrent.posts[2].slides[stateNextSlideFromBottomPost].body
 }
