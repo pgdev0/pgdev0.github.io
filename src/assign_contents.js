@@ -31,6 +31,11 @@ function backButton() {
   renderPage();
 }
 
+function homeButton() {
+  flowPageCurrent = flowPage;
+  renderPage();
+}
+
 /* ------------------------- Top-post buttons ------------------------ */
 function nextPageFromTopPost() {
   if(flowPageCurrent.posts[0].next == undefined) { alert("No further content"); return; }
